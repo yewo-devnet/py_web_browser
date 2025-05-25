@@ -1,7 +1,7 @@
 # PyQt5 Web Browser
 
 ## Project Overview
-This project is a simple **web browser** built using **PyQt5**, developed as part of a school assignment at the University of Malawi in the 2024/2025 academic year. The browser extends a previous project, an [AsyncIO HTTP server](https://github.com/your-username/asyncio-http-server), by connecting to it to render HTML templates hosted locally at `http://localhost:8085`. When a requested page is not found, the browser displays an error message and offers an option to search for the query on Google.
+This project is a simple **web browser** built using **PyQt5**, developed as part of a school assignment at the University of Malawi in the 2024/2025 academic year. The browser default fumctionality extends a previous project, an [AsyncIO HTTP server](https://github.com/yewo-devnet/py-http-server), by connecting to it to render HTML templates hosted locally at `http://localhost:8085`. When a requested page is not found, the browser displays an error message and offers an option to search for the query on Google.
 
 The browser:
 - Loads the homepage (`http://localhost:8085/`) by default.
@@ -13,41 +13,42 @@ The browser:
 ## Prerequisites
 To run this project, you need:
 - Python 3.7 or higher
-- PyQt5 library (`pip install PyQt5`)
-- PyQt5 WebEngine (`pip install PyQt5-WebEngine`)
-- The [AsyncIO HTTP server](https://github.com/your-username/asyncio-http-server) running locally on `http://localhost:8085`
+- PyQt5 library 
+- PyQt5 WebEngine 
+- The [AsyncIO HTTP server](https://github.com/yewo-devnet/py-http-server) running locally on `http://localhost:8085`
 - The `templates/` folder from the HTTP server project, containing `index.html` and `register.html`
 
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/pyqt5-web-browser.git
-   cd pyqt5-web-browser
+   git clone https://github.com/your-username/py_web_browser.git
+   cd py_web_browser
    ```
 
 2. **Install Dependencies**:
    Install the required Python packages:
    ```bash
-   pip install PyQt5 PyQt5-WebEngine
+   pip install -r requirements.txt
    ```
 
 3. **Set Up the HTTP Server**:
-   - Ensure the [AsyncIO HTTP server](https://github.com/your-username/asyncio-http-server) is set up and running.
+   - Ensure the [AsyncIO HTTP server](https://github.com/yewo-devnet/py-http-server) is set up and running.
    - Verify the `templates/` directory in the HTTP server project contains:
      - `index.html`: A homepage (e.g., `<h1>Welcome to the AsyncIO Server</h1>`).
      - `register.html`: A form with `username` and `email` fields (see the HTTP server repository for details).
    - Start the HTTP server:
      ```bash
-     cd path/to/asyncio-http-server
+     cd path/to/py_http_server
      python server.py
      ```
 
 4. **Project Structure**:
    Ensure the following file is present:
    ```
-   pyqt5-web-browser/
+   py_web_browser/
    ├── browser.py
    └── README.md
+   └── requirements.txt
    ```
 
 ## Usage
@@ -72,15 +73,9 @@ To run this project, you need:
 - The browser does not handle external URLs directly unless redirected to Google search.
 - Error handling is basic, focusing on detecting failed page loads and offering a Google search fallback.
 
-## Future Improvements
-- Add support for navigating to external URLs directly in the search bar.
-- Implement a history feature to track visited pages.
-- Enhance error messages with more details about why a page failed to load.
-- Add support for rendering CSS or JavaScript from the local server’s `assets/` directory.
 
 ## Acknowledgments
 - Special thanks to my lecturer, **Ramsey Ith Njema II**, for providing guidance and instruction during the course at the University of Malawi, which made this project possible.
-- Inspired by PyQt5 documentation and the [AsyncIO HTTP server project](https://github.com/your-username/asyncio-http-server).
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
