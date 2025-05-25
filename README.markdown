@@ -1,7 +1,7 @@
 # PyQt5 Web Browser
 
 ## Project Overview
-This project is a simple **web browser** built using **PyQt5**, developed as part of a school assignment at the University of Malawi in the 2024/2025 academic year. The browser default fumctionality extends a previous project, an [AsyncIO HTTP server](https://github.com/yewo-devnet/py-http-server), by connecting to it to render HTML templates hosted locally at `http://localhost:8085`. When a requested page is not found, the browser displays an error message and offers an option to search for the query on Google.
+This project is a simple **web browser** built using **PyQt5**,the browser default fumctionality extends a previous project, an [AsyncIO HTTP server](https://github.com/yewo-devnet/py-http-server), by connecting to it to render HTML templates hosted locally at `http://localhost:8085`. When a requested page is not found, the browser displays an error message and offers an option to search for the query on Google.
 
 The browser:
 - Loads the homepage (`http://localhost:8085/`) by default.
